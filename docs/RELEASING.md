@@ -114,6 +114,24 @@ when the selected mozconfig sets `MOZ_PGO=1`. `package.py` invokes `mach
 package` and prints the exact output paths. Copy those outputs to a staging
 directory before preparing another variant.
 
+### Reusing Mozilla's PGO profile
+
+A build can instead reuse the official PGO profile data for the exact Firefox
+release pinned in `release.json`. Obtain `merged.profdata` and the matching
+`en-US.log` from Mozilla's published profile-data artifact, then replace the
+`MOZ_PGO=1` line in the active mozconfig with:
+
+```bash
+ac_add_options --enable-profile-use=cross
+ac_add_options --with-pgo-profile-path=/path/to/merged.profdata
+ac_add_options --with-pgo-jarlog=/path/to/en-US.log
+```
+
+This skips both profiling passes. The official profile is collected on
+Mozilla's supported build configuration, so it is not a substitute for
+profiling Mercury's own AVX2 build; treat the result as an experimental
+artifact and record the profile origin with the release.
+
 The native base outputs are:
 
 | Target | `package.py` output |
