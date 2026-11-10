@@ -6,12 +6,12 @@ invoke Mercury scripts with `py -3` and set environment variables with
 PowerShell's `$env:NAME = 'value'` syntax.
 
 `release.json` is the authoritative machine-readable source for these pins.
-Mercury 153.0.3 pins its localization baseline separately from the Firefox
+Mercury 153.6.0 pins its localization baseline separately from the Firefox
 source baseline:
 
-- Firefox: tag `FIREFOX_153_0_3_RELEASE`, commit
-  `0c39e9282688363f5028d0541c17784f7fa5117c`.
-- Firefox l10n: commit `6795ea14a5bd5ed79a930e6759823c7236476ae4`.
+- Firefox: tag `FIREFOX_153_6_0esr_RELEASE`, commit
+  `a34c4160e3f75ab9918fbe4669ff7ae56f1977c8`.
+- Firefox l10n: commit `9ed61e28fa9555d45694b1385df1e3f3493d94e0`.
 - Firefox release set: 103 external locale identifiers plus the in-tree
   `en-US` locale.
 - Per-platform release set: 102 external locales plus `en-US`.
@@ -258,8 +258,8 @@ patches, branding overlay, active mozconfig, translation catalog, and prepared
 
 Firefox initially writes `target.*` files. After validation, the wrapper gives
 them stable publication names. A Linux AVX2 `zh-CN` directory, for example,
-contains `mercury-153.0.3.zh-CN.linux-x86_64-avx2.tar.xz` and
-`mercury-153.0.3.zh-CN.langpack.xpi`. Windows includes separately named ZIP
+contains `mercury-153.6.0.zh-CN.linux-x86_64-avx2.tar.xz` and
+`mercury-153.6.0.zh-CN.langpack.xpi`. Windows includes separately named ZIP
 and installer files; macOS contains a named TAR or DMG.
 The wrapper verifies the XPI ZIP structure, CRCs, Mercury extension ID,
 Mercury-branded manifest name and description, `langpack_id`, exact `languages`

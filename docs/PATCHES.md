@@ -5,7 +5,7 @@
 ## Current patch layout
 
 The patches in the stable `patches/firefox/` path currently apply only to
-`FIREFOX_153_0_3_RELEASE` (`0c39e9282688363f5028d0541c17784f7fa5117c`).
+`FIREFOX_153_6_0esr_RELEASE` (`a34c4160e3f75ab9918fbe4669ff7ae56f1977c8`).
 
 Git history preserves earlier patch sets; upgrading Firefox replaces or rebases
 the files in this directory instead of introducing another versioned path.

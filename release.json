@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "firefox": {
-    "version": "153.0.3",
-    "release": "FIREFOX_153_0_3_RELEASE",
-    "commit": "0c39e9282688363f5028d0541c17784f7fa5117c"
+    "version": "153.6.0",
+    "release": "FIREFOX_153_6_0esr_RELEASE",
+    "commit": "a34c4160e3f75ab9918fbe4669ff7ae56f1977c8"
   },
   "l10n": {
-    "commit": "6795ea14a5bd5ed79a930e6759823c7236476ae4"
+    "commit": "9ed61e28fa9555d45694b1385df1e3f3493d94e0"
   }
 }

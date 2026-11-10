@@ -15,7 +15,7 @@ PATCH_MANIFEST_PATH = REPOSITORY_ROOT / "patches" / "manifest.json"
 _PATCH_FILENAME_PATTERN = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\.patch")
 _PATCH_ROLE_PATTERN = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*")
 _FIREFOX_VERSION_PATTERN = re.compile(r"[0-9]+(?:\.[0-9]+)+")
-_FIREFOX_RELEASE_PATTERN = re.compile(r"FIREFOX_[A-Z0-9_]+_RELEASE")
+_FIREFOX_RELEASE_PATTERN = re.compile(r"FIREFOX_[A-Za-z0-9_]+_RELEASE")
 _COMMIT_PATTERN = re.compile(r"[0-9a-f]{40}")
 
 
