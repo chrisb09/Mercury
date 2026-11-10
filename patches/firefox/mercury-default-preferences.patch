@@ -1,7 +1,7 @@
 diff --git a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
 --- a/browser/app/profile/firefox.js
 +++ b/browser/app/profile/firefox.js
-@@ -3648,3 +3648,126 @@ pref("distribution.mozillaonline.ignore", true);
+@@ -3648,3 +3648,122 @@ pref("distribution.mozillaonline.ignore", true);
  #ifdef XP_MACOSX
    pref("browser.macAppMenu.setAsDefaultShown", false);
  #endif
@@ -9,13 +9,9 @@ diff --git a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
 +// Mercury product defaults. Keep this block at the end so these distribution
 +// defaults override Firefox defaults loaded earlier in this file.
 +
-+// Add-on installation. This deliberately weakens Firefox's signature checks;
-+// see docs/PREFERENCES.md before changing or shipping these defaults.
 +// Mercury language packs are published with Mercury releases, not fetched
 +// from Firefox's AMO language-tools endpoint.
 +pref("extensions.getAddons.langpacks.url", "");
-+pref("extensions.langpacks.signatures.required", false);
-+pref("xpinstall.signatures.required", false);
 +
 +// Updates, startup, and shell integration.
 +pref("app.update.auto", false);

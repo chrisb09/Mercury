@@ -1,7 +1,7 @@
 # Mercury preference migration for Firefox 153
 
-This audit is tied to Firefox tag `FIREFOX_153_0_3_RELEASE`, commit
-`0c39e9282688363f5028d0541c17784f7fa5117c`. The source delta was extracted
+This audit is tied to Firefox tag `FIREFOX_153_6_0esr_RELEASE`, commit
+`a34c4160e3f75ab9918fbe4669ff7ae56f1977c8`. The source delta was extracted
 from Mercury's `app/profile/firefox.js` against Firefox 129.0.2; it contains
 136 changed preference keys (including the conditional change for
 `devtools.command-button-experimental-prefs.enabled`).
@@ -75,10 +75,6 @@ This table accounts for every remaining Firefox 129-era delta.
 
 ## Effectiveness caveats
 
-- `xpinstall.signatures.required=false` and
-  `extensions.langpacks.signatures.required=false` are effective only when the
-  build does not set `MOZ_REQUIRE_SIGNING`. Mercury's mozconfigs explicitly
-  clear it. Enabling unsigned add-ons weakens add-on authenticity protection.
 - `extensions.getAddons.langpacks.url=""` prevents Firefox language packs from
   AMO from replacing or duplicating Mercury's product-specific language packs.
   `app.update.langpack.enabled=false` disables Firefox's special app-update and
